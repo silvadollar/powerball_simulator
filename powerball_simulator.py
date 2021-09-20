@@ -67,7 +67,7 @@ payout7 = 0
 payout4 = 0
 won = False
 
-max_attempts = 5_000_000
+max_attempts = 50_000_000
 
 while not won:
     mine = get_my_ticket(possibilities, power)
