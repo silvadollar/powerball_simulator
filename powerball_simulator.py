@@ -1,5 +1,6 @@
 from random import choice
 
+
 def get_winning_ticket(possibilities, power):
     winning_ticket = []
     pulled_power = choice(power)
@@ -30,7 +31,7 @@ def get_my_ticket(possibilities, power):
     return my_ticket
 
 
-def check_ticket(mine, winner):
+def check_ticket(mine, winner, winner_power):
     """This checks if my ticket matches the winning ticket."""
     mine_power_check = []
 
@@ -78,7 +79,7 @@ def main():
         mine = get_my_ticket(possibilities, power)
         # below is just to test a winner
         # mine = [1, 31, 3, 11, 5, 11]
-        won = check_ticket(mine[:], winner)
+        won = check_ticket(mine[:], winner, winner_power)
 
         mine_power = []
         pulled_mine_power = mine.pop()
@@ -138,6 +139,17 @@ def main():
                 payout4 += 1
             else:
                 payout += 0
+
+    try_again()
+
+
+def try_again():
+    answer = input("\nWould you like to try again?(y or n): ")
+    if answer == "y":
+        print("\n")
+        main()
+    else:
+        quit()
 
 
 if __name__ == '__main__':
