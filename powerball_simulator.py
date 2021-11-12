@@ -81,23 +81,13 @@ def main():
         # mine = [1, 31, 3, 11, 5, 11]
         won = check_ticket(mine[:], winner, winner_power)
 
+
         mine_power = []
         pulled_mine_power = mine.pop()
         mine_power.append(pulled_mine_power)
 
         plays += 1
         solution = set(mine).intersection(winner)
-
-        if plays >= max_attempts:
-            print("\nReached max attempts...")
-            print(f"Winning ticket: {winner}:{winner_power}")
-            print(f"You won ${payout:,d}.00 in total.")
-            print(f"You won {payout1mil:,d} $1,000,000 prizes")
-            print(f"You won {payout50k:,d} $50,000 prizes")
-            print(f"You won {payout100:,d} $100 prizes")
-            print(f"You won {payout7:,d} $7 prizes")
-            print(f"You won {payout4:,d} $4 prizes")
-            break
 
         if won:
             print("\nGRAND PRIZE WINNER!!!!")
@@ -110,6 +100,16 @@ def main():
             print(f"You won {payout100:,d} $100 prizes")
             print(f"You won {payout7:,d} $7 prizes")
             print(f"You won {payout4:,d} $4.00 prizes")
+        elif plays >= max_attempts:
+            print("\nReached max attempts...")
+            print(f"Winning ticket: {winner}:{winner_power}")
+            print(f"You won ${payout:,d}.00 in total.")
+            print(f"You won {payout1mil:,d} $1,000,000 prizes")
+            print(f"You won {payout50k:,d} $50,000 prizes")
+            print(f"You won {payout100:,d} $100 prizes")
+            print(f"You won {payout7:,d} $7 prizes")
+            print(f"You won {payout4:,d} $4 prizes")
+            won = True
         else:
             # print(f"Your ticket: {mine}:{mine_power}")
             # print(f"Winning ticket: {winner}:{winner_power}")
