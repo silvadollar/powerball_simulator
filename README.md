@@ -1,8 +1,9 @@
 # powerball_simulator
 Simulates Powerball drawing
 
-This is just a fun test code while I am learning. It only tests for a full winner of Powerball lottery ticket. 
+Below is a Powerball Simulator I created as a Python learning project.
 
-It makes a new ticket and tests it against the winning ticket. It will repeat 1,000,000 times or until a winning ticket is found.
-
-Attempts can be changed to any amount. 
+The program creates a winning ticket. 
+Then, after determining how many tickets the player wants it creates and checks them against the winning ticket. 
+Also, it determins the prize and tracks it to let you know what you would have won. Don't spend all of your money. 
+(Note: Buying more than 1 million tickets will take some time.)
